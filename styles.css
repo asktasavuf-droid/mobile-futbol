@@ -1,0 +1,51 @@
+/* Styles.css for Mobile Futbol */
+
+/* Body background gradient */
+body {
+    background: linear-gradient(to bottom, #2E7D32, #A5D6A7);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Canvas styling for football field */
+canvas {
+    background-color: #4CAF50; /* Football field green */
+    display: block;
+    margin: auto;
+}
+
+/* Responsive grid layout for touch buttons */
+.touch-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.touch-button {
+    background: linear-gradient(to right, #FFC107, #FF9800);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.touch-button:active {
+    background: linear-gradient(to right, #FF9800, #FFC107);
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 600px) {
+    .touch-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+    .touch-buttons {
+        grid-template-columns: 1fr;
+    }
+}
